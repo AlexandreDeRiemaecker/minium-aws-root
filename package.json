@@ -1,27 +1,53 @@
 {
-  "name": "temp",
-  "version": "0.1.0",
-  "bin": {
-    "temp": "bin/temp.js"
-  },
+  "name": "minium-aws-root",
+  "version": "1.0.0",
+  "description": "Contains IaC for AWS account related to Minium - a fictive corporation managing multiple AWS accounts",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node_modules/.bin/commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreDeRiemaecker/minium-aws-root.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexandreDeRiemaecker/minium-aws-root/issues"
+  },
+  "homepage": "https://github.com/AlexandreDeRiemaecker/minium-aws-root/blob/master/README.md",
   "devDependencies": {
-    "@aws-cdk/assert": "1.30.0",
-    "@types/jest": "^24.0.22",
-    "@types/node": "10.17.5",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "aws-cdk": "1.30.0",
-    "ts-node": "^8.1.0",
-    "typescript": "~3.7.2"
+    "@aws-cdk/assert": "^1.30.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.2",
+    "commitlint": "^8.3.5",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@aws-cdk/core": "1.30.0",
+    "aws-cdk": "^1.30.0",
+    "@aws-cdk/aws-apigateway": "^1.30.0",
+    "@aws-cdk/aws-cloudfront": "^1.30.0",
+    "@aws-cdk/aws-codebuild": "^1.30.0",
+    "@aws-cdk/aws-dynamodb": "^1.30.0",
+    "@aws-cdk/aws-lambda": "^1.30.0",
+    "@aws-cdk/aws-s3": "^1.30.0",
+    "@aws-cdk/aws-s3-deployment": "^1.30.0",
+    "@aws-cdk/core": "^1.30.0",
+    "cdk-constants": "^3.0.3",
     "source-map-support": "^0.5.16"
   }
 }
