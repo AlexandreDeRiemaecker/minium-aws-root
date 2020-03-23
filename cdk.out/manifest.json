@@ -1,0 +1,25 @@
+{
+  "version": "1.21.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "DummyStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "DummyStack.template.json"
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.30.0",
+      "@aws-cdk/cx-api": "1.30.0",
+      "jsii-runtime": "node.js/v12.14.1"
+    }
+  }
+}
